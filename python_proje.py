@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pickle
+import joblib
 from sklearn.ensemble import RandomForestClassifier
 import plotly.express as px
 
@@ -118,7 +118,7 @@ print("\nDetaylı Performans Raporu:\n", classification_report(y_test, y_tahmin)
 
 
 with open("orman_yangini_model_pickle.pkl", "wb") as file:
-    pickle.dump(model, file)
+    joblib.dump(model, file)
 
 
 
