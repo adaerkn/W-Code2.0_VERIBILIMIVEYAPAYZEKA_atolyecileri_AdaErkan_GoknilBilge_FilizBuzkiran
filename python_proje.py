@@ -2,12 +2,12 @@
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import joblib
-from sklearn.ensemble import RandomForestClassifier
+import pickle
 import plotly.express as px
 
 data = pd.read_csv("./forestfires.csv")
@@ -118,7 +118,7 @@ print("\nDetaylı Performans Raporu:\n", classification_report(y_test, y_tahmin)
 
 
 with open("orman_yangini_model_pickle.pkl", "wb") as file:
-    joblib.dump(model, file)
+    pickle.dump(model, file)
 
 
 
