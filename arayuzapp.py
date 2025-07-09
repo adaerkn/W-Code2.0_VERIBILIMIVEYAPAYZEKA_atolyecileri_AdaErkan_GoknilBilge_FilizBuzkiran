@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 
-with open("orman_yangini_model.pkl", "rb") as file:
-    model = joblib.load(file)
+with open("orman_yangini_model_pickle.pkl", "rb") as file:
+    model = pickle.load(file)
 
 st.title("🌲 Orman Yangını Risk Tahmini")
 
