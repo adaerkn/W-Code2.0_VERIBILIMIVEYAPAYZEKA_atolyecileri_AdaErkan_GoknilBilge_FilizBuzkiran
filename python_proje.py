@@ -117,7 +117,7 @@ print("Model Doğruluk Skoru:", accuracy_score(y_test, y_tahmin))
 print("\nDetaylı Performans Raporu:\n", classification_report(y_test, y_tahmin))
 
 
-with open("orman_yangini_model_pickle.pkl", "wb") as file:
+with open("orman_yangini_model.pkl", "wb") as file:
     joblib.dump(model, file)
 
 
